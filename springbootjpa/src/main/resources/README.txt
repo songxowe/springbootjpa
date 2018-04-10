@@ -56,12 +56,12 @@ Spring Boot + Spring Data Jpa:
   validate-验证表结构等，但不对数据库做修改。
 
 
-
+  application.yml 主配置文件
   spring:
     profiles:
       active: pro #使用生成环境配置
 
-  application-pro.ym
+  application-pro.ym 子配置文件
 
 
 2、编写实体类User
