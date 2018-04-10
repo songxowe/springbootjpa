@@ -26,7 +26,6 @@ public class ApplicationTests {
     movie.setName("泰坦尼克");
     movie.setPrice(70d);
     movie.setActionTime(new Date());
-
     movieService.save(movie);
   }
 
@@ -41,6 +40,11 @@ public class ApplicationTests {
   public void findById() {
     Optional<Movie> movie = movieService.findById(4);
     System.out.println(movie.get().getName() + " " + movie.get().getPrice());
+  }
+
+  @Test
+  public void deleteById() {
+    movieService.deleteById(3);
   }
 
 }
