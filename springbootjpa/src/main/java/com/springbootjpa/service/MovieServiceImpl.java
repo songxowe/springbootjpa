@@ -21,6 +21,16 @@ public class MovieServiceImpl implements MovieService {
   private MovieRepository movieRepository;
 
   /**
+   * 根据电影名查询
+   *
+   * @param name
+   * @return
+   */
+  public List<Movie> findByMovieName(String name) {
+    return movieRepository.findByMovieName(name);
+  }
+
+  /**
    * 新增(无 id) | 修改(有 id)
    *
    * @param movie

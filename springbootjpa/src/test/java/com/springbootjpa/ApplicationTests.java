@@ -19,6 +19,13 @@ public class ApplicationTests {
   private MovieService movieService;
 
   @Test
+  public void findByMovieName() {
+    for (Movie movie : movieService.findByMovieName("头号玩家")) {
+      System.out.println(movie.getName() + " " + movie.getPrice());
+    }
+  }
+
+  @Test
   public void save() {
     Movie movie = new Movie();
     // 新增(无 id) | 修改(有 id)

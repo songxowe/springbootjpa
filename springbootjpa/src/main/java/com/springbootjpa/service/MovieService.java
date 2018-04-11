@@ -18,4 +18,6 @@ public interface MovieService {
   List<Movie> findAll();
 
   Optional<Movie> findById(Integer id);
+
+  List<Movie> findByMovieName(String name);
 }
