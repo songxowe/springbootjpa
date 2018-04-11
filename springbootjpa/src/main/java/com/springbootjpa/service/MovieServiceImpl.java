@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 
@@ -19,6 +20,15 @@ import java.util.Optional;
 public class MovieServiceImpl implements MovieService {
   @Autowired
   private MovieRepository movieRepository;
+
+  @Override
+  public List<Movie> findByActionTimeBetween(Date beginDate, Date endDate) {
+    return movieRepository.findByActionTimeBetween(beginDate, endDate);
+  }
+
+  public List<Movie> findByNameNotLikeAndPrice(String name, Double price) {
+    return movieRepository.findByNameNotLikeAndPrice(name, price);
+  }
 
   public List<Movie> findByNameLike(String name) {
     return movieRepository.findByNameLike(name);
