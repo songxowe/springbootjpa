@@ -20,4 +20,8 @@ public interface MovieService {
   Optional<Movie> findById(Integer id);
 
   List<Movie> findByMovieName(String name);
+
+  List<Movie> findByNameLike(String name);
+
+  List<Movie> findByNameNotLike(String name);
 }

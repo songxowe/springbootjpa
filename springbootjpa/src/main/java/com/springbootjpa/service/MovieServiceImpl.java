@@ -20,6 +20,14 @@ public class MovieServiceImpl implements MovieService {
   @Autowired
   private MovieRepository movieRepository;
 
+  public List<Movie> findByNameLike(String name) {
+    return movieRepository.findByNameLike(name);
+  }
+
+  public List<Movie> findByNameNotLike(String name) {
+    return movieRepository.findByNameNotLike(name);
+  }
+
   /**
    * 根据电影名查询
    *
